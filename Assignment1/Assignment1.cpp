@@ -2,12 +2,101 @@
 //
 
 #include <iostream>
-
+#include <string>
+using namespace std;
+     
+/*//Task 3
 int main()
 {
-    std::cout << "Hello World!\n";
+int n;
+cout << "Number of iterations: ";
+cin >> n;
+//To reassign "n" to its original  value again
+int m = n;
+for (; 0 < n; n--)
+{
+cout << "Hello World!\n";
 }
+cout << "\n";
+n = m;
+while (0 < n)
+{
+cout << "Hello World!\n";
+n--;
+}
+cout << "\n";
+n = m;
+do
+{
+cout << "Hello World!\n";
+n--;
+} while (0<n);
+}*/
 
+/*
+void main()
+{
+string name;
+int age;
+char gender;
+string address;
+bool married;
+float height;
+
+cout << "What's your name? \n";
+cin >> name;
+
+cout << "What's your age? \n";
+cin >> age;
+
+cout << "What's your gender? \n";
+cin >> gender;
+cin.ignore();
+cout << "What's your address? \n";
+getline(cin,address);
+
+cout << "Are you married? \n";
+cin >> married;
+
+cout << "What's your height? (meters) \n";
+cin >> height;
+
+cout << name <<"\n" << age << "\n" << gender << "\n" << address << "\n" << married << "\n" << height;
+}*/
+int main() {
+	return 0;
+}
+/*
+void main()
+{
+char name[100];
+int age;
+char gender;
+char address[100];
+int married;
+float height;
+
+printf("What's your name? \n");
+scanf(name);
+
+printf("What's your age? \n");
+scanf_s("%i", age);
+
+printf("What's your gender? \n");
+scanf("%s", gender);
+cin.ignore();
+printf("What's your address? \n");
+scanf(address);
+
+printf("Are you married? \n");
+cin >> (married);
+
+printf("What's your height? (meters) \n");
+cin >> (height);
+
+cout << name << "\n" << age << "\n" << gender << "\n" << address << "\n" << married << "\n" << height;
+}
+*/
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
