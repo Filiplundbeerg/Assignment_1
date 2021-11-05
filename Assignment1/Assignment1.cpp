@@ -96,6 +96,7 @@ cout << name << "\n" << age << "\n" << gender << "\n" << address << "\n" << marr
 }
 */
 
+//Task 6
 int main()
 {
     int i = 3;
