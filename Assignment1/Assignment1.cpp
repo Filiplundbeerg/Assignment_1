@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <stdio.h>
 using namespace std;
      
 /*//Task 3
@@ -65,38 +66,57 @@ cout << name <<"\n" << age << "\n" << gender << "\n" << address << "\n" << marri
 }*/
 
 /*
-void main()
+int main()
 {
-char name[100];
-int age;
-char gender;
-char address[100];
-int married;
-float height;
+    char name [100];
+    int age;
+    char gender [100];
+    char address [100];
+    int married;
+    float height;
+    printf("What's your name? \n");
+    scanf("%79s", name);
+    //cin.clear();
+    printf("What's your age? \n");
+    //scanf("%i", &age);
+    //cin.ignore();
+    printf("What's your gender? \n");
+    //scanf("%c", gender);
+    //cin.ignore();
+    printf("What's your address? \n");
+    //scanf("%c", address);
 
-printf("What's your name? \n");
-scanf(name);
+    printf("Are you married? \n");
+    //scanf("%i", &married);
 
-printf("What's your age? \n");
-scanf_s("%i", age);
+    printf("What's your height? (meters) \n");
+    // scanf("%f", &height);
 
-printf("What's your gender? \n");
-scanf("%s", gender);
-cin.ignore();
-printf("What's your address? \n");
-scanf(address);
-
-printf("Are you married? \n");
-cin >> (married);
-
-printf("What's your height? (meters) \n");
-cin >> (height);
-
-cout << name << "\n" << age << "\n" << gender << "\n" << address << "\n" << married << "\n" << height;
+    //cout << name << "\n" << age << "\n" << gender << "\n" << address << "\n" << married << "\n" << height;
+    return 0;
 }
 */
+/* scanf example */
+#include <stdio.h>
 
-//Task 6
+int main()
+{
+    char str[80];
+    int i = 0;
+
+    printf("Enter your family name: ");
+    scanf("%79s", str);
+    printf("Enter your age: ");
+    //scanf("%d", &i);
+    printf("Mr. %s , %d years old.\n", str, i);
+    printf("Enter a hexadecimal number: ");
+    //scanf("%x", &i);
+    printf("You have entered %#x (%d).\n", i, i);
+
+    return 0;
+}
+
+/*//Task 6
 int main()
 {
     int i = 3;
@@ -129,7 +149,7 @@ int main()
     }
     return 0;
 }
-
+*/
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
