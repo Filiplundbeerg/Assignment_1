@@ -4,99 +4,132 @@
 #include <iostream>
 #include <string>
 using namespace std;
-
+     
 /*//Task 3
 int main()
 {
-	int n;
-	cout << "Number of iterations: ";
-	cin >> n;
-	//To reassign "n" to its original  value again
-	int m = n;
-	for (; 0 < n; n--)
-	{
-		cout << "Hello World!\n";
-	}
-	cout << "\n";
-	n = m;
-	while (0 < n) 
-	{
-		cout << "Hello World!\n";
-		n--;
-	}
-	cout << "\n";
-	n = m;
-	do
-	{
-		cout << "Hello World!\n";
-		n--;
-	} while (0<n); 
-}*/
-
-/*
-void main() 
+int n;
+cout << "Number of iterations: ";
+cin >> n;
+//To reassign "n" to its original  value again
+int m = n;
+for (; 0 < n; n--)
 {
-	string name;
-	int age;
-	char gender;
-	string address;
-	bool married;
-	float height;
-
-	cout << "What's your name? \n";
-	cin >> name;
-
-	cout << "What's your age? \n";
-	cin >> age;
-
-	cout << "What's your gender? \n";
-	cin >> gender;
-	cin.ignore();
-	cout << "What's your address? \n";
-	getline(cin,address);
-
-	cout << "Are you married? \n";
-	cin >> married;
-
-	cout << "What's your height? (meters) \n";
-	cin >> height;
-
-	cout << name <<"\n" << age << "\n" << gender << "\n" << address << "\n" << married << "\n" << height;
-}*/
-int main() {
-	return 0;
+cout << "Hello World!\n";
 }
+cout << "\n";
+n = m;
+while (0 < n)
+{
+cout << "Hello World!\n";
+n--;
+}
+cout << "\n";
+n = m;
+do
+{
+cout << "Hello World!\n";
+n--;
+} while (0<n);
+}*/
+
 /*
 void main()
 {
-	char name[100];
-	int age;
-	char gender;
-	char address[100];
-	int married;
-	float height;
+string name;
+int age;
+char gender;
+string address;
+bool married;
+float height;
 
-	printf("What's your name? \n");
-	scanf(name);
+cout << "What's your name? \n";
+cin >> name;
 
-	printf("What's your age? \n");
-	scanf_s("%i", age);
+cout << "What's your age? \n";
+cin >> age;
 
-	printf("What's your gender? \n");
-	scanf("%s", gender);
-	cin.ignore();
-	printf("What's your address? \n");
-	scanf(address);
+cout << "What's your gender? \n";
+cin >> gender;
+cin.ignore();
+cout << "What's your address? \n";
+getline(cin,address);
 
-	printf("Are you married? \n");
-	cin >> (married);
+cout << "Are you married? \n";
+cin >> married;
 
-	printf("What's your height? (meters) \n");
-	cin >> (height);
+cout << "What's your height? (meters) \n";
+cin >> height;
 
-	cout << name << "\n" << age << "\n" << gender << "\n" << address << "\n" << married << "\n" << height;
+cout << name <<"\n" << age << "\n" << gender << "\n" << address << "\n" << married << "\n" << height;
+}*/
+
+/*
+void main()
+{
+char name[100];
+int age;
+char gender;
+char address[100];
+int married;
+float height;
+
+printf("What's your name? \n");
+scanf(name);
+
+printf("What's your age? \n");
+scanf_s("%i", age);
+
+printf("What's your gender? \n");
+scanf("%s", gender);
+cin.ignore();
+printf("What's your address? \n");
+scanf(address);
+
+printf("Are you married? \n");
+cin >> (married);
+
+printf("What's your height? (meters) \n");
+cin >> (height);
+
+cout << name << "\n" << age << "\n" << gender << "\n" << address << "\n" << married << "\n" << height;
 }
 */
+
+int main()
+{
+    int i = 3;
+    int count,n, primeTest;
+
+    printf("\nEnter the number of prime numbers required :  ");
+    cin >> n;
+
+    if (n>= 1)
+    {
+        cout << "\nThe first " << n << " prime numbers are :  ";
+        printf("2 ");
+    }
+    //Testing by iteration. When the number of 
+    for (count = 2; count <= n; i++)
+    {
+        // iteration to check c is prime or not
+        for (primeTest = 2; primeTest < i; primeTest++)
+        {
+            if (i % primeTest == 0)
+                break;
+        }
+
+        if (primeTest == i)  // c is prime
+        {
+            printf("%d ", i);
+            count++;    // increment the count of prime numbers
+        }
+
+    }
+    return 0;
+}
+
+
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
