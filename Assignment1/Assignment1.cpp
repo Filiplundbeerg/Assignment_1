@@ -106,7 +106,7 @@ int main()
 
     if (n>= 1)
     {
-        printf("\n\nFirst %d prime numbers are :  ", n);
+        cout << "\nThe first " << n << " prime numbers are :  ";
         printf("2 ");
     }
     //Testing by iteration. When the number of 
