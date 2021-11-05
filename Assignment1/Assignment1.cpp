@@ -63,9 +63,7 @@ cin >> height;
 
 cout << name <<"\n" << age << "\n" << gender << "\n" << address << "\n" << married << "\n" << height;
 }*/
-int main() {
-	return 0;
-}
+
 /*
 void main()
 {
@@ -97,6 +95,41 @@ cin >> (height);
 cout << name << "\n" << age << "\n" << gender << "\n" << address << "\n" << married << "\n" << height;
 }
 */
+
+int main()
+{
+    int i = 3;
+    int count,n, primeTest;
+
+    printf("\nEnter the number of prime numbers required :  ");
+    cin >> n;
+
+    if (n>= 1)
+    {
+        printf("\n\nFirst %d prime numbers are :  ", n);
+        printf("2 ");
+    }
+    //Testing by iteration. When the number of 
+    for (count = 2; count <= n; i++)
+    {
+        // iteration to check c is prime or not
+        for (primeTest = 2; primeTest < i; primeTest++)
+        {
+            if (i % primeTest == 0)
+                break;
+        }
+
+        if (primeTest == i)  // c is prime
+        {
+            printf("%d ", i);
+            count++;    // increment the count of prime numbers
+        }
+
+    }
+    return 0;
+}
+
+
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
 
