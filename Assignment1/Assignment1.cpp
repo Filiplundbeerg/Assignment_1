@@ -70,51 +70,42 @@ int main()
 {
     char name [100];
     int age;
-    char gender [100];
+    char gender;
     char address [100];
     int married;
     float height;
-    printf("What's your name? \n");
-    scanf("%79s", name);
-    //cin.clear();
-    printf("What's your age? \n");
-    //scanf("%i", &age);
-    //cin.ignore();
-    printf("What's your gender? \n");
-    //scanf("%c", gender);
-    //cin.ignore();
-    printf("What's your address? \n");
-    //scanf("%c", address);
+    printf_s("What's your name? \n");
+    scanf_s("%s", name, sizeof(name));
+    printf_s("%s", name);
 
-    printf("Are you married? \n");
-    //scanf("%i", &married);
+    printf_s("What's your age? \n");
+    scanf_s("%i", &age);
+    printf_s("%i", age);
+    cin.ignore();
 
-    printf("What's your height? (meters) \n");
-    // scanf("%f", &height);
+    printf_s("What's your gender? \n");
+    scanf_s("%c", &gender);
+
+    printf_s("What's your address? \n");
+    scanf_s("%s", &address, sizeof(address));
+
+    printf_s("Are you married? \n");
+    scanf_s("%i", &married, sizeof(married));
+
+    printf_s("What's your height? (meters) \n");
+    scanf_s("%f", &height, sizeof(height));
+
+    printf_s("Your name is: %s \n", name);
+    printf_s("Your age is: %i \n", age);
+    printf_s("Your gender is: %c \n", gender);
+    printf_s("Your address is: %s \n", address);
+    printf_s("Are you  married?: %i \n", married);
+    printf_s("You are %f m tall\n", height);
 
     //cout << name << "\n" << age << "\n" << gender << "\n" << address << "\n" << married << "\n" << height;
     return 0;
 }
 */
-/* scanf example */
-#include <stdio.h>
-
-int main()
-{
-    char str[80];
-    int i = 0;
-
-    printf("Enter your family name: ");
-    scanf("%79s", str);
-    printf("Enter your age: ");
-    //scanf("%d", &i);
-    printf("Mr. %s , %d years old.\n", str, i);
-    printf("Enter a hexadecimal number: ");
-    //scanf("%x", &i);
-    printf("You have entered %#x (%d).\n", i, i);
-
-    return 0;
-}
 
 /*//Task 6
 int main()
@@ -150,6 +141,62 @@ int main()
     return 0;
 }
 */
+/*
+int main()
+{
+    try
+    {
+        int Bounce()
+        {
+
+            while (n >= 0)
+            {
+                return  Bounce(n);
+            }
+        };
+
+        int ne;
+        cin >> ne;
+        if (ne > 0) 
+        {
+            
+        }
+        else
+        {
+            cout << "Natural numbers only.";
+        }
+        int j();
+        
+    }
+    catch (exception)
+    {
+
+    }
+}
+*/
+
+//Task 7
+void Bounce(int n)
+{
+    while (true)
+    {
+        if (n == 0) {
+            cout << "0";
+            break;
+        }
+        cout << n;
+        Bounce(--n);
+        cout << n+1;
+        break;
+    }
+}
+
+int main() 
+{
+    int n;
+    cin >> n;
+    Bounce(n);
+}
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
