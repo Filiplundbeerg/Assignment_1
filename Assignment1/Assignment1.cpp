@@ -175,7 +175,7 @@ int main()
 }
 */
 
-//Task 7
+/*//Task 7
 void Bounce(int n)
 {
     while (true)
@@ -193,10 +193,52 @@ void Bounce(int n)
 
 int main() 
 {
+    cout << "Type an integer";
     int n;
     cin >> n;
     Bounce(n);
 }
+*/
+
+//Task 8
+int main()
+{
+    char c;
+    printf_s("Input an integer or letter");
+    scanf_s("%c", &c, 1);
+    int counter = 1;
+    int counterInverted = c-65;
+
+    while (true)
+    {
+        if (counter < int(c) - 47 && isdigit(c))
+        {
+            for (int i = 1; i <= counter; i++)
+            {
+                printf_s("%i", i);
+            }
+            printf_s("\n");
+            counter++;
+        }
+        else if (counter <= int(c) - 64 && !isdigit(c))
+        {
+            for (int i = counter; i >0; i--)
+            {
+                printf_s("%c", int(c) - counterInverted);
+            }
+            printf_s("\n");
+            counter++;
+            counterInverted--;
+        }
+        else
+        {
+            break;
+
+        }
+    
+    }
+}
+
 
 // Run program: Ctrl + F5 or Debug > Start Without Debugging menu
 // Debug program: F5 or Debug > Start Debugging menu
