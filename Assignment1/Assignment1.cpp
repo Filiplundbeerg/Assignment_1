@@ -204,14 +204,25 @@ int main()
 int main()
 {
     char c;
-    printf_s("Input an integer or letter");
+    printf_s("Input an integer or letter: ");
+    cin.ignore();
     scanf_s("%c", &c, 1);
     int counter = 1;
     int counterInverted = c-65;
 
+    if (!((int(c) < 58 && int(c) > 48) || (int(c) > 65 && int(c) < 91)))
+    {
+        printf_s("Please provide only integers or capital letters.\n");
+        main();
+    }
+    
+
     while (true)
     {
-        if (counter < int(c) - 47 && isdigit(c))
+        if (int(c) == 1)
+            printf_s("1");
+
+        else if (counter < int(c) - 47 && isdigit(c))
         {
             for (int i = 1; i <= counter; i++)
             {
@@ -231,10 +242,7 @@ int main()
             counterInverted--;
         }
         else
-        {
             break;
-
-        }
     
     }
 }
